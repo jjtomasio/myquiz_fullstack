@@ -133,4 +133,4 @@ Abra o browser e navegar para `http://localhost:5173`
 ---
 
 ## 👨‍💻 Autor
-**João Tomásio** - jjtomasio@gmail.com - Projeto Formativo V2767|U03814 (2026)
+**João Tomásio** - jjtomasio@gmail.com - 
