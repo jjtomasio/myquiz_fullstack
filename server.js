@@ -13,8 +13,6 @@ app.use(express.json());
 
 // Conexão Pool à Base de Dados MySQL
 
- 
-
 const pool = mysql.createPool({
     host: process.env.DATABASE_HOST || '127.0.0.1',
     port: Number(process.env.DATABASE_PORT || 3306),
@@ -61,7 +59,7 @@ app.get('/api/init_jogo', async (req, res) => {
         );
         const totalPerguntasNoBanco = totalPerguntasResult[0].total;
 
-        // 🔥 IMPORTANTE: Definir o header ANTES de qualquer validação ou return de esgotado
+        // Definir o header ANTES de qualquer validação ou return de esgotado
         res.setHeader('X-Total-Perguntas', totalPerguntasNoBanco.toString());
 
         const [todosQuizzes] = await pool.query(
